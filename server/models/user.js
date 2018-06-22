@@ -1,34 +1,47 @@
-module.exports = function (sequelize, Sequelize) {
-
-	var User = sequelize.define('user', {
-		id: {
+module.exports = function(sequelize, DataTypes) {
+	var User = sequelize.define("User", {
+		 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: Sequelize.INTEGER
+			type: DataTypes.INTEGER
 		},
 		fullname: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			notEmpty: true
 		},
 		username: {
-			type: Sequelize.TEXT
+			type: DataTypes.TEXT
 		},
 		email: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			validate: {
 				isEmail: true
 			}
 		},
 		password: {
-			type: Sequelize.STRING,
+			type: DataTypes.STRING,
 			allowNull: false
-		},
-		last_login: {
-			type: Sequelize.DATE
-		},
-
-	});
-
+		}
+	}
+		
+		, {
+			tableName: 'users',
+			classMethods: {
+					associate : function(models) {
+							User.hasMany(Department, {foreignKey: 'id'});
+					},
+				},
+		});
+	
+	
+	
 	return User;
 
-}
+};
+
+
+
+
+
+
+
