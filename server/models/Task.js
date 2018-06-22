@@ -16,9 +16,10 @@ module.exports = function(sequelize, DataTypes) {
 			}
 	}, {
 			tableName: 'tasks',
+			timestamps: false,
 			classMethods: {
 					associate : function(models) {
-							Task.belongsTo(models.Department, {foreignKey: 'id'})
+							Task.belongsTo(models.Department, {foreignKey: 'department_id'})
 					},
 				},
 		});

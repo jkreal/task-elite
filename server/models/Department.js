@@ -12,14 +12,14 @@ module.exports = function(sequelize, DataTypes) {
 			}
 	}, {
 			tableName: 'departments',
+			timestamps: false,
 			classMethods: {
 					associate : function(models) {
-							Department.belongsTo(models.Project, {foreignKey: 'id'})
-							Department.hasMany(models.Task, {foreignKey: 'id'})
+							Department.belongsTo(models.Project, {foreignKey: 'project_id'})
+							Department.hasMany(models.Task, {foreignKey: 'task_id'})
 					},
 				},
 		});
-	
 	
 	
 	return Department;
