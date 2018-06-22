@@ -1,0 +1,22 @@
+{
+	"development": {
+
+		"username": "root",
+		"password": "goober",
+		"database": "task_elite",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
+	},
+	"test": {
+		"username": "root",
+		"password": "goober",
+		"database": "task_elite",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
+	},
+	"username": "root",
+	"password": "goober",
+	"database": "task_elite",
+	"host": "127.0.0.1",
+	"dialect": "mysql"
+}
