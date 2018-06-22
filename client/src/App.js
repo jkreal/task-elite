@@ -17,13 +17,8 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 class App extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      <Login />
-      
-=======
       <Sidebar />
 
->>>>>>> 702877e33fab33629fa17ec50d38e07136aecfc4
     );
   }
 }
