@@ -5,18 +5,26 @@ import {
   Row, 
   Col,
   Nav,
-  Navbar,
+  // Navbar,
   NavItem,
   NavDropdown,
   MenuItem
 } from "react-bootstrap";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import Sidebar from "./Components/Sidebar";
+import Navbar from "./Components/Navbar";
+import Wrapper from "./Components/Wrapper";
 
 class App extends Component {
   render() {
     return (
-      <Sidebar />
+      <div>
+      <Wrapper>
 
+        <Sidebar />
+        <Navbar />
+
+      </Wrapper>
+      </div>
     );
   }
 }
