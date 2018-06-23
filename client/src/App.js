@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Login from "./Components/Login"
-import Signup from "./Components/Signup"
+import Dashboard from "./Components/Dashboard/Dashboard";
 import {
-  Row, 
+  Row,
   Col,
   Nav,
   Navbar,
@@ -11,12 +10,11 @@ import {
   NavDropdown,
   MenuItem
 } from "react-bootstrap";
-import Sidebar from "./Components/Sidebar/Sidebar";
 
 class App extends Component {
   render() {
     return (
-      <Signup />
+			<Dashboard />
     );
   }
 }
