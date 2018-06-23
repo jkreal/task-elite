@@ -1,8 +1,9 @@
 import React from "react";
 import Login from "../Login";
 import Signup from "../Signup";
-import Tasks from "../Tasks";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
+import MainContent from "../MainContent";
 import {
   Button,
   Row,
@@ -13,18 +14,22 @@ import {
   ControlLabel
 } from "react-bootstrap";
 
-const Dashboard = (props) => (
-      <div>
-        <Row>{/* <Navbar /> */}</Row>
+const Dashboard = props => (
+  <div>
+    <Row>
+      <Col xs={12} md={2}>
+        <Sidebar />
+      </Col>
+      <Col xs={12} md={10}>
         <Row>
-          <Col xs={12} md={6}>
-            <Sidebar />
-          </Col>
-					<Col xs={12} md={6}>
-            <Tasks />
-          </Col>
+          <Navbar />
         </Row>
-      </div>
-    );
+        <Row>
+          <MainContent />
+        </Row>
+      </Col>
+    </Row>
+  </div>
+);
 
 export default Dashboard;
