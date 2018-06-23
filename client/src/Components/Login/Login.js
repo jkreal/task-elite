@@ -67,6 +67,13 @@ class Login extends React.Component {
           >
             Login
           </Button>
+					<Button
+						id="signupbtn"
+            block
+            bsSize="small"
+            type="button">
+            Sign Up
+          </Button>
         </form>
       </div>
     );

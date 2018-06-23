@@ -1,29 +1,81 @@
 import React from "react";
 import "./Signup.css";
-import { Button, Row, Col } from "react-bootstrap";
+import {
+  Button,
+  Row,
+  Col,
+  FormControl,
+  FormGroup,
+  Form,
+  ControlLabel
+} from "react-bootstrap";
 
 class Signup extends React.Component {
-  state = {};
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+  };
 
   render() {
     return (
-      <React.Fragment>
-        <Row>
-          <Col>
-            <div>
-              <form id="signup" name="signup" method="post" action="/signup">
-                <label for="email">Email Address</label>
-                <input class="text" name="email" type="email" />
-                <label for="firstname">Full Name</label>
-                <input name="firstname" type="text" />
-                <label for="password">Password</label>
-                <input name="password" type="password" />
-                <input class="btn" type="submit" value="Sign Up" />
-              </form>
-            </div>
-          </Col>
-        </Row>
-      </React.Fragment>
+      <div className="Login">
+			<div className="imgdiv">
+				<img src="./img/img.jpg" alt=""/>
+				<h1>Welcome To Task Elite, Please Sign Up!</h1>
+			</div>
+        <form onSubmit={this.handleSubmit}>
+				<FormGroup controlId="fullname" bsSize="large">
+            <ControlLabel className="text">Full Name</ControlLabel>
+            <FormControl
+              autoFocus
+              type="text"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+						</FormGroup>
+          <FormGroup controlId="email" bsSize="large">
+            <ControlLabel className="text">Email</ControlLabel>
+            <FormControl
+              autoFocus
+              type="email"
+              value={this.state.email}
+              onChange={this.handleChange}
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
+            <ControlLabel className="text">Password</ControlLabel>
+            <FormControl
+              value={this.state.password}
+              onChange={this.handleChange}
+              type="password"
+            />
+          </FormGroup>
+					<Button
+            block
+            bsSize="small"
+            type="submit">
+            Sign Up
+          </Button>
+        </form>
+      </div>
     );
   }
 }
