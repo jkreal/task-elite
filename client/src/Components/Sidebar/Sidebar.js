@@ -24,12 +24,18 @@ const Sidebar = (props) => (
             <a className="nav-link" href="#">Department</a>
         </li>
         <li className="nav-item">
+<<<<<<< HEAD
+            <a className="nav-link" href="#">Tasks</a>
+        </li>
+        <li className="nav-item">
+=======
             <a className="nav-link" href="#">All Tasks</a>
         </li>
         <li className="nav-item">
             <a className="nav-link" href="#">Active Tasks</a>
         </li>
         <li className="nav-item">
+>>>>>>> bb47ac8172def17c0662228b0076c4e9d7706aa2
             <a className="nav-link" href="#">Completed Tasks</a>
         </li>
         
