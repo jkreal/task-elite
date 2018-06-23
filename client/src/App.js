@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-// import logo from "./logo.svg";
 import "./App.css";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import {
-  Row, 
+  Row,
   Col,
   Nav,
   // Navbar,
@@ -10,21 +10,11 @@ import {
   NavDropdown,
   MenuItem
 } from "react-bootstrap";
-import Sidebar from "./Components/Sidebar";
-import Navbar from "./Components/Navbar";
-import Wrapper from "./Components/Wrapper";
 
 class App extends Component {
   render() {
     return (
-      <div>
-      <Wrapper>
-
-        <Sidebar />
-        <Navbar />
-
-      </Wrapper>
-      </div>
+			<Dashboard />
     );
   }
 }
