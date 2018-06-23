@@ -69,8 +69,9 @@ class Signup extends React.Component {
             />
           </FormGroup>
 					<Button
-            block
-            bsSize="small"
+						block
+						bsSize="large"
+            disabled={!this.validateForm()}
             type="submit">
             Sign Up
           </Button>
