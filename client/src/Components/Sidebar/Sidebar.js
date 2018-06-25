@@ -14,7 +14,7 @@ const Sidebar = (props) => (
 
         </div>
         
-            <br/>
+            
         
 
         <li className="nav-item active">
