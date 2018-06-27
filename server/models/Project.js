@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
 			autoIncrement: true,
 			primaryKey: true
 		},
-		projectName: DataTypes.STRING,
+		project_name: DataTypes.STRING,
 		description: {
 			type: DataTypes.STRING,
 			notNull: true
@@ -16,15 +16,12 @@ module.exports = function (sequelize, DataTypes) {
 	});
 
 	Project.associate = function (models) {
-		models.Project.belongsTo(models.User, {
-			foreignKey: 'owner_id'
-		});
+
 		models.Project.hasMany(models.Department, {
-			foreignKey: 'department_id'
+			foreignKey: 'id'
 		});
+
 	}
-
-
 
 	return Project;
 

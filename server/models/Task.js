@@ -13,6 +13,10 @@ module.exports = function (sequelize, DataTypes) {
 		description: {
 			type: DataTypes.STRING,
 			notNull: true
+		},
+
+		completed: {
+			type: DataTypes.BOOLEAN
 		}
 	}, {
 		tableName: 'tasks',
@@ -22,7 +26,11 @@ module.exports = function (sequelize, DataTypes) {
 	Task.associate = function (models) {
 		models.Task.belongsTo(models.Department, {
 			foreignKey: 'department_id'
-		})
+		});
+
+		models.Task.belongsTo(models.User, {
+			foreignKey: 'assigned_user'
+		});
 	}
 
 
