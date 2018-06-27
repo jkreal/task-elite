@@ -1,5 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import "./Users.css";
+import users from "./users.json";
+import User from "./User";
 import {
   Button,
   Row,
@@ -10,16 +12,30 @@ import {
   ControlLabel
 } from "react-bootstrap";
 
-const Users = props => (
-  <Row>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit commodi
-        sunt error excepturi, maiores dolores alias culpa pariatur id quidem
-        itaque nobis dolorem omnis harum tempora rem et porro ea!
-      </p>
-    </div>
-  </Row>
-);
+class Users extends Component {
+  state = {
+    users
+  };
+  render() {
+    return (
+      <Row>
+          {this.state.users.map(user => (
+            <User 
+              id={user.id}
+              key={user.id}
+              name={user.name}
+            />
+    
+          ))}
+      </Row>
+    
+    
+  )
+}
+
+  }
+
+// const Users = props => (
+// );
 
 export default Users;
