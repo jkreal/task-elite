@@ -1,4 +1,4 @@
-.user-container {
+.department-container {
     background-color: #fff;
     width: 100%;
     height: 70vh;
@@ -14,6 +14,6 @@ hr{
     background-color: #5ffa79;
 }
 
-.userName {
+.departmentTitle {
     color: #000;
 }
