@@ -1,10 +1,11 @@
+
 import React from "react";
-import Users from "./Users";
+import Tasks from "../Tasks";
 import "./MainContent.css";
 
 const MainContent = (props) => (
     <div>
-        <Users />
+        <Tasks />
         
       </div>
 )
