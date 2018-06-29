@@ -21,7 +21,7 @@ const Dashboard = (props) => (
             <Sidebar />
           </Col>
 					<Col xs={12} md={6}>
-            <Dashboard />
+            <Dashboard  />
           </Col>
         </Row>
       </div>
