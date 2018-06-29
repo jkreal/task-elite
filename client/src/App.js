@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Login from "./Components/Login/Login";
 import {
   Row,
   Col,
@@ -10,6 +10,7 @@ import {
   NavDropdown,
   MenuItem
 } from "react-bootstrap";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 class App extends Component {
   render() {
