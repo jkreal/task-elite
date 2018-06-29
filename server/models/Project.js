@@ -9,7 +9,8 @@ module.exports = function (sequelize, DataTypes) {
 		description: {
 			type: DataTypes.STRING,
 			notNull: true
-		}
+		},
+		owner_id: DataTypes.INTEGER,
 	}, {
 		tableName: 'projects',
 		timestamps: false,

@@ -6,16 +6,16 @@ INSERT INTO owners (owner)
 	VALUES
     (1);
 
-INSERT INTO users (fullname, username, email, password, owner)
+INSERT INTO users (fullname, username, email, password)
 	VALUES
-    ('Josh Rowden', 'jkrowden', 'jkrowden@gmail.com', 'apassword', 1),
-    ('Spencer Daniels', 'speencah', 'speencah@gmail.com', 'apassword', null),
-    ('Andrew Johnson', 'mrandrewson', 'andrewson@gmail.com', 'apassword', 2);
+    ('Josh Rowden', 'jkrowden', 'jkrowden@gmail.com', 'apassword'),
+    ('Spencer Daniels', 'speencah', 'speencah@gmail.com', 'apassword'),
+    ('Andrew Johnson', 'mrandrewson', 'andrewson@gmail.com', 'apassword');
 
-INSERT INTO projects (project_name, description)
+INSERT INTO projects (project_name, description, owner_id)
 VALUES
-	('Project Undefined', 'First Project'),
-    ('Project 2', 'Second Project');
+	('Project Undefined', 'First Project', 1),
+    ('Project 2', 'Second Project', 2);
     
         
 INSERT INTO departments (departmentName, description, project_id)
@@ -27,7 +27,7 @@ INSERT INTO departments (departmentName, description, project_id)
 INSERT INTO tasks (taskName, description, completed, department_id, assigned_user) 
 	VALUES
     ('Task1', 'Do a thing', false, 1, 1),
-	('Task2', 'Do a thing', false, 1, 1),
+	('Task2', 'Do another thing', false, 1, 1),
 	('Task3', 'Do a thing', true, 1, 1),
     ('Task4', 'Do a thing', true, 1, 1),
     ('Task5', 'Do a thing', false, 1, 1),
