@@ -37,18 +37,17 @@ var models = require("./server/models");
 
 //Routes
 var authRoute = require('./server/routes/auth.js')(app, passport);
-
+require("./server/controllers/dbcontroller")(app);
 
 //load passport strategies
 require('./server/config/passport/passport.js')(passport, models.user);
 
-
 //Sync Database
 models.sequelize.sync().then(function () {
-	console.log('Nice! Database looks fine')
+	console.log('Database synced');
 
 }).catch(function (err) {
-	console.log(err, "Something went wrong with the Database Update!")
+	console.log(err, "Database sync failed");
 });
 
 
