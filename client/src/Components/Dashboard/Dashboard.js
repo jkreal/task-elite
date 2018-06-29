@@ -1,8 +1,7 @@
 import React from "react";
-import Login from "../Login";
-import Signup from "../Signup";
-import Tasks from "../Tasks";
-import Sidebar from "../Sidebar/Sidebar";
+import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
+import MainContent from "./MainContent";
 import {
   Button,
   Row,
@@ -15,13 +14,13 @@ import {
 
 const Dashboard = (props) => (
       <div>
-        <Row>{/* <Navbar /> */}</Row>
+        <Row>{<Navbar />}</Row>
         <Row>
           <Col xs={12} md={6}>
             <Sidebar />
           </Col>
-					<Col xs={12} md={6}>
-            <Dashboard  />
+					<Col>
+					<MainContent  />
           </Col>
         </Row>
       </div>
