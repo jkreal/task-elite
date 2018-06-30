@@ -1,10 +1,8 @@
-# Create React Express App
+# Task-Elite
 
-## About This Boilerplate
+## About
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+Task-Elite is a task managing app. It is powered by MySQL, Express, Node, and React.
 
 ## Starting the app locally
 
