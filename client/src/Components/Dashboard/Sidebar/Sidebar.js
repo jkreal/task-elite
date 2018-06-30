@@ -3,7 +3,7 @@ import "./Sidebar.css";
 import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sidebarStyle">
+    <nav className="navbar navbar-expand-lg sidebarStyle">
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
         
@@ -13,10 +13,7 @@ const Sidebar = (props) => (
                 <img className="logoImage" src="./images/taskEliteLogo.png"></img>
             </span>
 
-        </div>
-        
-            
-        
+        </div> 
 
         <li className="nav-item active">
             <Link className="nav-link" to="/users">Users</Link>
