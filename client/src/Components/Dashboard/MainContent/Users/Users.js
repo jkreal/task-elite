@@ -15,7 +15,9 @@ import {
 class Users extends Component {
   state = {
     users
-  };
+	};
+	
+
   render() {
     return (
       <Row>

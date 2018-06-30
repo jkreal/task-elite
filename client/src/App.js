@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Dashboard from "./Components/Dashboard";
+import Login from "./Components/Login";
 import {
 	Row,
 	Col,
@@ -16,7 +17,10 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<Dashboard />
+				<div>
+					<Route path="/dashboard" component={Dashboard} />
+					<Route path="/login" component={Login} />
+				</div>
 			</Router>
 		);
 	}
