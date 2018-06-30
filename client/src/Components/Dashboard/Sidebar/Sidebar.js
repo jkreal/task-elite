@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
+import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light sidebarStyle">
@@ -18,13 +19,13 @@ const Sidebar = (props) => (
         
 
         <li className="nav-item active">
-            <a className="nav-link" href="#">Users <span className="sr-only">(current)</span></a>
+            <Link className="nav-link" to="/users">Users</Link>
         </li>
         <li className="nav-item">
             <a className="nav-link" href="#">Department</a>
         </li>
         <li className="nav-item">
-            <a className="nav-link" href="#">Tasks</a>
+            <Link className="nav-link" to="/tasks">Tasks</Link>
         </li>
         <li className="nav-item">
             <a className="nav-link" href="#">Completed Tasks</a>

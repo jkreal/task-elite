@@ -24,6 +24,8 @@ class Users extends Component {
               id={user.id}
               key={user.id}
               name={user.name}
+              image={user.image}
+              department={user.department}
             />
     
           ))}

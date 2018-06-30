@@ -1,9 +1,7 @@
 import React from "react";
-import Login from "../Login";
-import Signup from "../Signup";
-import Sidebar from "../Sidebar";
-import Navbar from "../Navbar";
-import MainContent from "../MainContent";
+import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import MainContent from "./MainContent";
 import {
   Button,
   Row,
