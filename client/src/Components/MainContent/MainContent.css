@@ -11,3 +11,16 @@
     /* overflow: auto; */
     margin: 25px;
 }
+
+#descriptionTitle {
+	color: white;
+	}
+#description {
+	color: white;
+}
+#cmtBtn {
+	color: black;
+	height: 35px;
+	width: 70px;
+	float: left;
+}

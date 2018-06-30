@@ -28,6 +28,10 @@ const Tasks = props => (
               type="text"
               onChange={this.handleChange}
             />
+		<button id="cmtBtn" /*value="Submit" this will be sister value to id that will input text into the inside of the button.*/
+			onPress={"onPressSubmit"}
+			
+			/>
 						</FormGroup>
 						</form>
 	</Row>
