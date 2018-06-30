@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Dashboard from "./Components/Dashboard";
 import Login from "./Components/Login";
+import Signup from "./Components/Signup";
 import {
 	Row,
 	Col,
@@ -18,8 +19,10 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
+					<Route exact path="/" component={Login}/>
 					<Route path="/dashboard" component={Dashboard} />
 					<Route path="/login" component={Login} />
+					<Route path="/signup" component={Signup} />
 				</div>
 			</Router>
 		);

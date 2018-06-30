@@ -13,7 +13,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
 // For Passport
 app.use(session({
 	secret: 'keyboard cat',
@@ -36,7 +35,7 @@ var models = require("./server/models");
 
 
 //Routes
-var authRoute = require('./server/routes/auth.js')(app, passport);
+var authRoute = require('./server/controllers/authcontroller')(app);
 require("./server/controllers/dbcontroller")(app);
 
 //load passport strategies
