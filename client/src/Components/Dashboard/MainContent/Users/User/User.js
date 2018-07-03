@@ -3,17 +3,9 @@ import "./User.css";
 
 const User = props => (
 
-	<div onClick={() => props.setClicked(props.id)} className="card">
-		<div className="img-container">
-      		<img alt={props.name} src={props.image} />
-              
-    	</div>
-        <div>
-            <ul>
-                <li>Name: 
-                    {props.name}
 
 	// <div onClick={() => props.setClicked(props.id)} className="user">
+	<React.Fragment>
 	<div className="user">
 		{/* <div className="img-container">
       		<img alt={props.name} src={props.image} />
@@ -37,6 +29,7 @@ const User = props => (
             </ul>
         </div>
   </div>
+	</React.Fragment>
 );
 
 export default User;
