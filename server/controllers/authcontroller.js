@@ -30,7 +30,8 @@ module.exports = function (app) {
 		(req, res) => {
 			console.log('req', req.user)
 			console.log('POST to /login')
-			const user = JSON.parse(JSON.stringify(req.user)) // hack
+			const user = JSON.parse(JSON.stringify(req.user))
+			console.log(req.password);
 			const cleanUser = Object.assign({}, user)
 			if (cleanUser.local) {
 				console.log(`Deleting ${cleanUser.local.password}`)
@@ -62,9 +63,10 @@ module.exports = function (app) {
 
 	app.post('/auth/signup', (req, res) => {
 		const {
+			fullName,
 			username,
 			password
-		} = req.body
+		} = req.body;
 		// ADD VALIDATION
 		db.User.findOne({
 			where: {
@@ -79,6 +81,7 @@ module.exports = function (app) {
 			} else {
 				console.log('User does not exist', user)
 				db.User.build({
+						fullname: fullName,
 						username: username,
 						password: password
 					}).save().then(createdUsername => {

@@ -42,7 +42,7 @@ require("./server/controllers/dbcontroller")(app);
 require('./server/config/passport/passport.js')(passport, models.user);
 
 //Sync Database
-models.sequelize.sync().then(function () {
+models.sequelize.sync({force: true}).then(function () {
 	console.log('Database synced');
 
 }).catch(function (err) {
