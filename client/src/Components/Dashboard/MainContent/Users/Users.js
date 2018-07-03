@@ -1,6 +1,7 @@
 import React, {Component} from "react";
+import API from "../utils/API";
 import "./Users.css";
-import users from "./users.json";
+// import users from "./users.json";
 import User from "./User";
 import {
   Button,
@@ -12,6 +13,7 @@ import {
   ControlLabel
 } from "react-bootstrap";
 
+
 class Users extends Component {
   state = {
     users
@@ -19,19 +21,23 @@ class Users extends Component {
 	
 
   render() {
+    console.log(this);
     return (
       <Row>
           {this.state.users.map(user => (
             <User 
               id={user.id}
               key={user.id}
-              name={user.name}
-              image={user.image}
+              name={user.fullname}
+              username={user.username}
+              email={user.email}
+              
               department={user.department}
             />
     
           ))}
       </Row>
+         
     
     
   )
