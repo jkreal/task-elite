@@ -2,6 +2,17 @@ import React from "react";
 import "./User.css";
 
 const User = props => (
+
+	<div onClick={() => props.setClicked(props.id)} className="card">
+		<div className="img-container">
+      		<img alt={props.name} src={props.image} />
+              
+    	</div>
+        <div>
+            <ul>
+                <li>Name: 
+                    {props.name}
+
 	// <div onClick={() => props.setClicked(props.id)} className="user">
 	<div className="user">
 		{/* <div className="img-container">
@@ -21,6 +32,7 @@ const User = props => (
                 </li> 
                 <li>Department: 
                     {" " + props.department}
+
                 </li> 
             </ul>
         </div>

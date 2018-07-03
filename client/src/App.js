@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
+import Login from "./Components/Login/Login";
 import Dashboard from "./Components/Dashboard";
-import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import axios from "axios";
+
+
+
 import {
 	Row,
 	Col,
@@ -13,7 +16,11 @@ import {
 	NavDropdown,
 	MenuItem
 } from "react-bootstrap";
+
+import Dashboard from "./Components/Dashboard/Dashboard";
+
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 class App extends Component {
 	constructor() {
