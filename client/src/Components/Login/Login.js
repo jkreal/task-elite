@@ -23,9 +23,6 @@ class Login extends React.Component {
     };
 	}
 	
-	_login = (username, password) => {
-
-	}
 
   validateForm() {
     return this.state.username.length > 0 && this.state.password.length > 0;
