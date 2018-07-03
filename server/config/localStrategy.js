@@ -33,7 +33,7 @@ passport.deserializeUser(function(id, done) {
 });
 
 function newfuntion() {
-	
+	return false;
 }
 
 module.exports = passport;
