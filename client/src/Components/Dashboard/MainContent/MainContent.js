@@ -1,5 +1,6 @@
 import React from "react";
 import Users from "./Users";
+
 import Departments from "./Departments";
 import MainTasks from "./MainTasks";
 import "./MainContent.css";
