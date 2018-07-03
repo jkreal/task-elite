@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
 // For Passport
 app.use(session({
 	secret: 'keyboard cat',
@@ -37,14 +36,14 @@ var models = require("./server/models");
 
 
 //Routes
-var authRoute = require('./server/routes/auth.js')(app, passport);
+var authRoute = require('./server/controllers/authcontroller')(app);
 require("./server/controllers/dbcontroller")(app);
 
 //load passport strategies
 require('./server/config/passport/passport.js')(passport, models.user);
 
 //Sync Database
-models.sequelize.sync().then(function () {
+models.sequelize.sync({force: true}).then(function () {
 	console.log('Database synced');
 
 }).catch(function (err) {

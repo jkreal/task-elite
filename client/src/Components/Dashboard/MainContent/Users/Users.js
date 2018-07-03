@@ -20,23 +20,9 @@ import {
 
 class Users extends Component {
   state = {
-    users: []
-  };
-
-  componentDidMount() {
-    this.loadUsers();
-  }
-
-  loadUsers = () => {
-    console.log("hit");
-    API.getUsers()
-      .then(res =>
-        this.setState({users: res.data}))
-  }
-
-  componentDidMount() {
-    this.loadUsers();
-  }
+    users
+	};
+	
 
   render() {
     console.log(this);
