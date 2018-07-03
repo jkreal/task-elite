@@ -30,8 +30,13 @@ module.exports = function (sequelize, DataTypes) {
 		});
 
 	User.associate = function (models) {
-		models.User.hasMany(models.Project, {
-			foreignKey: 'project_id'
+
+		models.User.hasMany(models.Task, {
+			foreignKey: 'assigned_user'
+		});
+
+		models.User.belongsTo(models.Project, {
+			foreignKey: 'id'
 		});
 	}
 
