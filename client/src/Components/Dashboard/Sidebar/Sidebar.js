@@ -1,9 +1,11 @@
 import React from "react";
 import "./Sidebar.css";
+
 import { Link } from 'react-router-dom';
 
 const Sidebar = (props) => (
     <nav className="navbar navbar-expand-lg sidebarStyle">
+
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
         
@@ -17,12 +19,15 @@ const Sidebar = (props) => (
 
         <li className="nav-item active">
             <Link className="nav-link" to="/users">Users</Link>
+
         </li>
         <li className="nav-item">
             <a className="nav-link" href="#">Department</a>
         </li>
         <li className="nav-item">
+
             <Link className="nav-link" to="/tasks">Tasks</Link>
+
         </li>
         <li className="nav-item">
             <a className="nav-link" href="#">Completed Tasks</a>
