@@ -1,7 +1,9 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./MainTasks.css";
-import tasks from "./tasksData.json";
+import API from "../utils/API";
+// import tasks from "./tasksData.json";
 import Task from "./Task";
+import AddTaskButton from "./AddTaskButton";
 import {
   Button,
   Row,
@@ -14,28 +16,43 @@ import {
 
 class MainTasks extends Component {
   state = {
-    tasks
+    tasks: []
   };
+
+  loadTasks = () => {
+    console.log("hit from loadTasks");
+    API.getTasks().then(res => this.setState({ tasks: res.data }));
+  };
+
+  componentDidMount() {
+    this.loadTasks();
+  }
+
   render() {
     return (
+      <div>
       <Row>
-          {this.state.tasks.map(task => (
-            <Task
-              id={task.id}
-              key={task.id}
-              task={task.task}
-              description={task.description}
-            />
-            // <div>Something else for right now</div>
-    
-          ))}
+        <AddTaskButton />
       </Row>
-    
-    
-  )
-}
 
+      
+      
+      
+      <Row>
+        {this.state.tasks.map(task => (
+          <Task
+            id={task.id}
+            key={task.id}
+            task={task.taskName}
+            description={task.description}
+          />
+          // <div>Something else for right now</div>
+        ))}
+      </Row>
+        </div>
+    );
   }
+}
 
 // const Users = props => (
 // );

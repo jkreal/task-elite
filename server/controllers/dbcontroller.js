@@ -13,6 +13,25 @@ module.exports = function (app) {
 		});
 	});
 
+	// get all departments
+	app.get("/api/departments", function (req, res) {
+		console.log("hit from get all departments in dbcontroller.js");
+		db.Department.findAll({})
+		.then(function(dbDepartment) {
+			console.log(dbDepartment);
+			res.json(dbDepartment);
+		})
+	})
+	// get all users
+	app.get("/api/user", function (req, res) {
+		console.log("hit from dbcontroller.js");
+		db.User.findAll({})
+		.then(function(dbuser) {
+			console.log(dbuser);
+			res.json(dbuser);
+		})
+	})
+	
 	//Get user by ID, or by username if not a number
 	app.get("/api/user/:id", function (req, res) {
 		if (!isNaN(req.params.id)) {
@@ -32,9 +51,19 @@ module.exports = function (app) {
 				res.json(dbUser);
 			});
 		}
-
-
+		
+		
 	});
+	
+	// get all tasks
+	app.get("/api/task", function (req, res) {
+		console.log("hit from dbcontroller.js");
+		db.Task.findAll({})
+		.then(function(dbTask) {
+			console.log(dbTask);
+			res.json(dbTask);
+		})
+	})
 
 	//Get task by ID
 	app.get("/api/task/:id", function (req, res) {

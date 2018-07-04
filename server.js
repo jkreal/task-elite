@@ -5,6 +5,7 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
+const path = require('path');
 
 var PORT = process.env.PORT || 3001;
 
@@ -12,7 +13,6 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(bodyParser.json());
-
 
 // For Passport
 app.use(session({
@@ -36,7 +36,7 @@ var models = require("./server/models");
 
 
 //Routes
-var authRoute = require('./server/routes/auth.js')(app, passport);
+var authRoute = require('./server/controllers/authcontroller')(app);
 require("./server/controllers/dbcontroller")(app);
 
 //load passport strategies
@@ -49,7 +49,6 @@ models.sequelize.sync().then(function () {
 }).catch(function (err) {
 	console.log(err, "Database sync failed");
 });
-
 
 app.get('/', function (req, res) {
 	res.send('Welcome to Passport with Sequelize');
