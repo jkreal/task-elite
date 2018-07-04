@@ -11,12 +11,11 @@ const MainContent = (props) => (
     <div className="maincontentContainer">
         {/* <Users /> */}
         {/* <Departments /> */}
-        <MainTasks />
      
-		{/* <Users /> */}
+		<MainTasks />
 		{/* <Departments /> */}
-			<Route path="/tasks" component={MainTasks}/>
-			<Route path="/users" component={Users}/>
+			{/* <Route path="/tasks" component={MainTasks}/>
+			<Route path="/users" component={Users}/> */}
 
 		</div>
 	</React.Fragment>
