@@ -6,12 +6,6 @@ INSERT INTO owners (owner)
 	VALUES
     (1);
 
-INSERT INTO users (fullname, username, password)
-	VALUES
-    ('Josh Rowden', 'jkrowden@gmail.com', 'apassword'),
-    ('Spencer Daniels', 'speencah@gmail.com', 'apassword'),
-    ('Andrew Johnson', 'andrewson@gmail.com', 'apassword');
-
 INSERT INTO projects (project_name, description, owner_id)
 VALUES
 	('Project Undefined', 'First Project', 1),
