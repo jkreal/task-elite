@@ -6,11 +6,11 @@ INSERT INTO owners (owner)
 	VALUES
     (1);
 
-INSERT INTO users (fullname, username, email, password)
+INSERT INTO users (fullname, username, password)
 	VALUES
-    ('Josh Rowden', 'jkrowden', 'jkrowden@gmail.com', 'apassword'),
-    ('Spencer Daniels', 'speencah', 'speencah@gmail.com', 'apassword'),
-    ('Andrew Johnson', 'mrandrewson', 'andrewson@gmail.com', 'apassword');
+    ('Josh Rowden', 'jkrowden@gmail.com', 'apassword'),
+    ('Spencer Daniels', 'speencah@gmail.com', 'apassword'),
+    ('Andrew Johnson', 'andrewson@gmail.com', 'apassword');
 
 INSERT INTO projects (project_name, description, owner_id)
 VALUES
