@@ -7,18 +7,20 @@ import "./MainContent.css";
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const MainContent = (props) => (
+
 <div>
 	<div className="maincontentContainer">
 		{/* <Users /> */}
 		<Departments />
 		{/* <MainTasks /> */}
-	</div>
+		{/* <Users /> */}
+		{/* <Departments /> */}
+			<Route path="/tasks" component={MainTasks}/>
+			<Route path="/users" component={Users}/>
 
-	<div className="maincontentContainer">
-		<Route path="/tasks" component={MainTasks} />
-		<Route path="/users" component={Users} />
-	</div>
-</div>
+		</div>
+	</React.Fragment>
+
 )
 
 export default MainContent;
