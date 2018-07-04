@@ -10,18 +10,16 @@ const MainContent = (props) => (
 <React.Fragment>
     <div className="maincontentContainer">
         {/* <Users /> */}
-        <Departments />
-        {/* <MainTasks /> */}
-      </div>
-
-	<div className="maincontentContainer">
+        {/* <Departments /> */}
+        <MainTasks />
+     
 		{/* <Users /> */}
 		{/* <Departments /> */}
 			<Route path="/tasks" component={MainTasks}/>
 			<Route path="/users" component={Users}/>
 
-	</div>
-</React.Fragment>
+		</div>
+	</React.Fragment>
 )
 
 export default MainContent;

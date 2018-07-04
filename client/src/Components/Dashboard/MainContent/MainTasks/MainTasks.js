@@ -3,6 +3,7 @@ import "./MainTasks.css";
 import API from "../utils/API";
 // import tasks from "./tasksData.json";
 import Task from "./Task";
+import AddTaskButton from "./AddTaskButton";
 import {
   Button,
   Row,
@@ -29,6 +30,14 @@ class MainTasks extends Component {
 
   render() {
     return (
+      <div>
+      <Row>
+        <AddTaskButton />
+      </Row>
+
+      
+      
+      
       <Row>
         {this.state.tasks.map(task => (
           <Task
@@ -40,6 +49,7 @@ class MainTasks extends Component {
           // <div>Something else for right now</div>
         ))}
       </Row>
+        </div>
     );
   }
 }
