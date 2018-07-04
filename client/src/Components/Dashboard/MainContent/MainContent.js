@@ -18,8 +18,8 @@ const MainContent = (props) => (
 			<Route path="/tasks" component={MainTasks}/>
 			<Route path="/users" component={Users}/>
 
-	</div>
-</React.Fragment>
+		</div>
+	</React.Fragment>
 )
 
 export default MainContent;
