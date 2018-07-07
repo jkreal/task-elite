@@ -1,7 +1,15 @@
 {
+<<<<<<< HEAD
   "main.css": "static/css/main.7b55d0d0.css",
   "main.css.map": "static/css/main.7b55d0d0.css.map",
   "main.js": "static/js/main.ceca5d86.js",
   "main.js.map": "static/js/main.ceca5d86.js.map",
+=======
+
+  "main.css": "static/css/main.4ce06e01.css",
+  "main.css.map": "static/css/main.4ce06e01.css.map",
+  "main.js": "static/js/main.a0471f98.js",
+  "main.js.map": "static/js/main.a0471f98.js.map",
+>>>>>>> 3e92f908f68acb17a376930b24dc50faba5c40f7
   "static\\media\\background.jpg": "static/media/background.bf78fa5b.jpg"
 }
