@@ -15,7 +15,7 @@ import {
 	MenuItem
 } from "react-bootstrap";
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
@@ -78,10 +78,12 @@ class App extends Component {
 		return (
 			<Router>
 				<div>
-					<Route exact path="/" render={() => <Login _login={this._login} />} />
-					<Route exact path = "/dashboard" render={() => <Dashboard user={this.state.user} />} />
-					<Route exact path="/login" render={() => <Login _login={this._login} />} />
-					<Route path="/signup" component={Signup} />
+					<Switch>
+						<Route exact path="/" render={() => <Login _login={this._login} />} />
+						<Route exact path="/dashboard" render={({ match }) => <Dashboard user={this.state.user} match={match} />} />
+						<Route exact path="/login" render={() => <Login _login={this._login} />} />
+						<Route path="/signup" component={Signup} />
+					</Switch>
 				</div>
 			</Router>
 		);

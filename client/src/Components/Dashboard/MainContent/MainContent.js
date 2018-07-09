@@ -8,15 +8,16 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const MainContent = (props) => (
 
-<React.Fragment>
-    <div className="maincontentContainer">
-        {/* <Users /> */}
-        {/* <Departments /> */}
-		<Departments />
-			{/* <Route path="/tasks" component={MainTasks}/>
-			<Route path="/users" component={Users}/> */}
+	<React.Fragment>
 
+		<div className="maincontentContainer">
+			{/* <Users /> */}
+			{/* <Departments /> */}
+			{/* <Departments /> */}
+			<Route path={`/dashboard/tasks`} component={MainTasks} />
+			<Route path="/users" component={Users} />
 		</div>
+
 	</React.Fragment>
 
 )

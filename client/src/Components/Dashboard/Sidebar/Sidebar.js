@@ -18,7 +18,7 @@ const Sidebar = (props) => (
         </div> 
 
         <li className="nav-item active">
-            <Link className="nav-link" to="/users">Users</Link>
+            <Link className="nav-link" to={`${props.match}/users`}>Users</Link>
 
         </li>
         <li className="nav-item">
@@ -26,7 +26,7 @@ const Sidebar = (props) => (
         </li>
         <li className="nav-item">
 
-            <Link className="nav-link" to="/tasks">Tasks</Link>
+            <Link className="nav-link" to={`${props.match}/tasks`}>Tasks</Link>
 
         </li>
         <li className="nav-item">
