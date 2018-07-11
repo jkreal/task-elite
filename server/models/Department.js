@@ -16,12 +16,12 @@ module.exports = function (sequelize, DataTypes) {
 	});
 
 	Department.associate = function (models) {
-		models.Department.belongsTo(models.Project, {
-			foreignKey: 'project_id'
+		Department.belongsTo(models.Project, {
+			allowNull: true
 		});
 		
-		models.Department.hasMany(models.Task, {
-			foreignKey: 'id'
+		Department.hasMany(models.Task, {
+			allowNull: true
 		});
 
 	}

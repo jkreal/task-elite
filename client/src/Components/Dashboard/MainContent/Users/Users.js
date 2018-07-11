@@ -1,10 +1,7 @@
 import React, {Component} from "react";
 
-import users from "./users.json";
-
 import API from "../utils/API";
 import "./Users.css";
-// import users from "./users.json";
 
 import User from "./User";
 import {
@@ -20,9 +17,15 @@ import {
 
 class Users extends Component {
   state = {
-    users: ''
+    users: []
 	};
 	
+	loadDepartments = () => {
+    console.log("hit from loadDepartments");
+    API.getUsers().
+      then(res => 
+        this.setState({ users: res.data }));
+  };
 
   render() {
     console.log(this);
@@ -45,7 +48,6 @@ class Users extends Component {
           ))}
       </Row>
 
-    
     
   )
 }

@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
 			autoIncrement: true,
 			primaryKey: true
 		},
-		taskName: {
+		task_name: {
 			type: DataTypes.STRING,
 			notNull: true
 		},
@@ -24,12 +24,14 @@ module.exports = function (sequelize, DataTypes) {
 	});
 
 	Task.associate = function (models) {
-		models.Task.belongsTo(models.Department, {
-			foreignKey: 'department_id'
+		Task.belongsTo(models.Department, {
+			onDelete: 'CASCADE',
+			allowNull: true
 		});
 
-		models.Task.belongsTo(models.User, {
-			foreignKey: 'assigned_user'
+		Task.belongsTo(models.User, {
+			onDelete: 'CASCADE',
+			allowNull: true
 		});
 	}
 

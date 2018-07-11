@@ -13,13 +13,13 @@ module.exports = function (sequelize, DataTypes) {
 		owner_id: DataTypes.INTEGER,
 	}, {
 		tableName: 'projects',
-		timestamps: false,
+		timestamps: false
 	});
 
 	Project.associate = function (models) {
 
-		models.Project.hasMany(models.Department, {
-			foreignKey: 'id'
+		Project.hasMany(models.Department, {
+			allowNull: true
 		});
 
 	}
