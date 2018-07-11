@@ -176,17 +176,21 @@ module.exports = function (app) {
 	});
 
 	//Post a new task
-	app.post("api/newtask", function(req, res) {
+	app.post("/api/newtask", function(req, res) {
 		var task = req.body;
 		db.Task.create({
-			taskName: task.name,
+			task_name: task.name,
 			description: task.description,
-			completed: false,
-			department_id: task.department,
-			assigned_user: null
+			completed: task.completed,
+			DepartmentId: task.department,
+			UserId: task.assigned
+
 		}).then(function(dbTask) {
-			console.log("user added to db");
-			res.status(200).send("user added to db");
+			console.log("task added to db");
+			res.status(200).send("task added to db");
+		}).catch(function(error) {
+			console.log("there is an error");
+			res.status(422).send("error adding user:" + error);
 		});
 	});
 
