@@ -6,10 +6,12 @@
     top: 0;
     left: 0;
     margin: 0;
+
+    border: 4px solid black;
 }
 
 .logoImage {
-    width: 33%;
+    width: 50%;
     height: auto;
     display: block;
     margin-left: auto;

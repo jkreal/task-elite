@@ -7,9 +7,9 @@ const AddTaskButton = props => (
 
   <div className="content">
     <ul>
-    <li className="add-task-button active">
+    <div className="add-task-button active">
             <Link className="nav-link" to="/users">Add New Task</Link>
-        </li>
+        </div>
       {/* <li>
         Description:
         {" " + props.description}

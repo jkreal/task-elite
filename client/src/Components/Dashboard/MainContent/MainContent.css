@@ -2,7 +2,7 @@
     padding-top: 50px;
     background: #ECEFF1;
     height: 100%;
-    width: 100%;
+    width: 75%;
     /* display: flex; */
     /* flex-flow: row wrap; */
     padding: 15px;
@@ -10,4 +10,5 @@
     align-content: flex-start;
     /* overflow: auto; */
     margin: 25px;
+    margin-left: 25%;
 }

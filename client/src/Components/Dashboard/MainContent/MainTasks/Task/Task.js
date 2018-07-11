@@ -3,12 +3,12 @@ import "./Task.css";
 
 const Task = props => (
 	// <div onClick={() => props.setClicked(props.id)} className="user">
-	<div className="user">
+	<div className="task">
 		<div className="img-container">
       		<img alt={props.name} src={props.image} />
               
     	</div>
-        <div className="content">
+        <div className="task-content">
             <ul>
                 <li>Task: 
                     {" " + props.task}

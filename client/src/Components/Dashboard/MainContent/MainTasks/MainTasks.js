@@ -34,9 +34,6 @@ class MainTasks extends Component {
       <Row>
         <AddTaskButton />
       </Row>
-
-      
-      
       
       <Row>
         {this.state.tasks.map(task => (

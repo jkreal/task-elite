@@ -1,11 +1,11 @@
-.user {
+.task {
     background: #fff;
     border-radius: 2px;
     height: 125px;
     margin: 1rm;
     position: relative;
     display: flex;
-    width: 100%;
+    width: 75%;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     /* text-align: left; */
     border: solid;
