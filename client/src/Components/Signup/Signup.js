@@ -36,6 +36,7 @@ class Signup extends React.Component {
   };
 
 	handleSubmit = (event) => {
+
     event.preventDefault();
     axios.post('/auth/signup', {
 			fullName: this.state.fullName,
@@ -66,7 +67,7 @@ class Signup extends React.Component {
     return (
       <div className="Login">
 			<div className="imgdiv">
-				<img src="./img/img.jpg" alt=""/>
+				<img src="./img/img.png" alt=""/>
 				<h1>Welcome To Task Elite, Please Sign Up!</h1>
 			</div>
         <form onSubmit={this.handleSubmit}>

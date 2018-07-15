@@ -5,7 +5,7 @@ module.exports = function (sequelize, DataTypes) {
 			autoIncrement: true,
 			primaryKey: true
 		},
-		task_name: {
+		taskName: {
 			type: DataTypes.STRING,
 			notNull: true
 		},
@@ -23,17 +23,17 @@ module.exports = function (sequelize, DataTypes) {
 		timestamps: false,
 	});
 
-	Task.associate = function (models) {
-		Task.belongsTo(models.Department, {
-			onDelete: 'CASCADE',
-			allowNull: true
-		});
+	// Task.associate = function (models) {
+	// 	models.Task.belongsTo(models.Department, {
+	// 		foreignKey: 'department_id'
+	// 		// foreignKey: 'id'
+	// 	});
 
-		Task.belongsTo(models.User, {
-			onDelete: 'CASCADE',
-			allowNull: true
-		});
-	}
+	// 	models.Task.belongsTo(models.User, {
+	// 		foreignKey: 'assigned_user'
+	// 		// foreignKey: 'id'
+	// 	});
+	// }
 
 
 

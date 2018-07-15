@@ -53,9 +53,6 @@ class Login extends React.Component {
 			}
 		}).catch(error => {
 			alert("Invalid username or password. Please try again.");
-			this.setState({
-				redirectTo: '/login'
-			})
 		});
 
 
@@ -70,7 +67,7 @@ class Login extends React.Component {
     return (
 			<div className="Login">
 			<div className="imgdiv">
-				<img src="./img/img.jpg" alt=""/>
+				<img src="./img/img.png" alt=""/>
 				<h1>Welcome To Task Elite</h1>
 			</div>
         <form>

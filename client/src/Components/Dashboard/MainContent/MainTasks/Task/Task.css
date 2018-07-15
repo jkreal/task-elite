@@ -1,11 +1,11 @@
-.task {
+.user {
     background: #fff;
     border-radius: 2px;
     height: 125px;
     margin: 1rm;
     position: relative;
     display: flex;
-    width: 75%;
+    width: 100%;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
     /* text-align: left; */
     border: solid;
@@ -40,4 +40,32 @@
   
   .user > .content > ul > li {
     /* margin-top: 18px; */
+  }
+
+  .user > .content > .delete {
+    color: #ff1744;
+    font-size: 48px;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    cursor: pointer;
+  }
+
+  .user > .content > .complete {
+    background-color: #65cc76;
+    border-color: black;
+    border-style: solid;
+    /* width: 10%; */
+    height: 1em;
+    padding: 2%;
+    border-radius: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+  }
+
+  .user > .content > .complete:hover {
+    background-color: blue;
   }

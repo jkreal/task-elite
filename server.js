@@ -14,6 +14,11 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+
+
 // For Passport
 app.use(session({
 	secret: 'keyboard cat',
@@ -24,45 +29,44 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 
-app.set('views', './server/views')
-app.engine('hbs', exphbs({
-	extname: '.hbs'
-}));
-app.set('view engine', '.hbs');
-
-
 //Models
 var models = require("./server/models");
 
 
 //Routes
-var authRoute = require('./server/controllers/authcontroller')(app);
 require("./server/controllers/dbcontroller")(app);
+require("./server/controllers/authcontroller")(app);
 
 //load passport strategies
 require('./server/config/passport/passport.js')(passport, models.user);
 
 //Sync Database
-models.sequelize.sync({force: true}).then(function () {
+// models.sequelize.sync({force: true}).then(function () {
+models.sequelize.sync({}).then(function () {
 	console.log('Database synced');
 
-}).then(function(stuff) {
+}).then(function (stuff) {
 	models.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
 }).catch(function (err) {
 	console.log(err, "Database sync failed");
 });
 
-app.get('/', function (req, res) {
-	res.send('Welcome to Passport with Sequelize');
-});
+
+// app.get('/', function (req, res) {
+// 	res.send('Welcome to Passport with Sequelize');
+// });
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-	app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV === "production") {
+// 	app.use(express.static("client/build"));
+// }
 
 // Send every request to the React app
 // Define any API routes before this runs
+// app.get("*", function (req, res) {
+// 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
+
 app.get("*", function (req, res) {
 	res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

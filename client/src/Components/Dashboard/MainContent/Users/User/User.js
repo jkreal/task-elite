@@ -2,10 +2,7 @@ import React from "react";
 import "./User.css";
 
 const User = props => (
-
-
 	// <div onClick={() => props.setClicked(props.id)} className="user">
-	<React.Fragment>
 	<div className="user">
 		{/* <div className="img-container">
       		<img alt={props.name} src={props.image} />
@@ -22,14 +19,12 @@ const User = props => (
                 <li>Email: 
                     {" " + props.email}
                 </li> 
-                <li>Department: 
+                {/* <li>Department: 
                     {" " + props.department}
-
-                </li> 
+                </li>  */}
             </ul>
         </div>
   </div>
-	</React.Fragment>
 );
 
 export default User;

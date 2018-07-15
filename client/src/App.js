@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import Login from "./Components/Login/Login";
-import Dashboard from "./Components/Dashboard";
+import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import axios from "axios";
-
+import Dashboard from "./Components/Dashboard";
 import {
 	Row,
 	Col,
@@ -14,8 +12,9 @@ import {
 	NavDropdown,
 	MenuItem
 } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import axios from "axios";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
@@ -71,6 +70,7 @@ class App extends Component {
 					loggedIn: true,
 					user: response.data.user
 				})
+				
 			}
 		})
 	}
@@ -80,9 +80,9 @@ class App extends Component {
 				<div>
 					<Switch>
 						<Route exact path="/" render={() => <Login _login={this._login} />} />
-						<Route exact path="/dashboard" render={({ match }) => <Dashboard user={this.state.user} match={match} />} />
+						<Route exact path="/dashboard" render={() => <Dashboard user={this.state.user}/>} />
 						<Route exact path="/login" render={() => <Login _login={this._login} />} />
-						<Route path="/signup" component={Signup} />
+						<Route exact path="/signup" component={Signup} />
 					</Switch>
 				</div>
 			</Router>
